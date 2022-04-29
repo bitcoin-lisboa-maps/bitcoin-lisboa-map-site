@@ -28,7 +28,7 @@ showMap.addEventListener('click', (e) => {
 	showMap.style.display = "none"
 	appleMap.style.display = "block"
 
-	const center = new mapkit.Coordinate(9.1549238, -83.7570566)
+	const center = new mapkit.Coordinate(38.721377, -9.131023)
 	map = new mapkit.Map("apple-map", {
 	    center,
 	    cameraDistance: 50000,
