@@ -41,7 +41,7 @@ showMap.addEventListener('click', (e) => {
     
         const coordinate = map.convertPointOnPageToCoordinate(new DOMPoint(event.pageX, event.pageY));
         clickAnnotation = new mapkit.MarkerAnnotation(coordinate, {
-            title: "Add business here",
+            title: "Adicione Negócio Aqui",
             color: "#c969e0"
         })
         map.addAnnotation(clickAnnotation)
@@ -66,17 +66,17 @@ form.addEventListener('submit', async (e) => {
 	}
 
 	if(!postData.name) {
-		alert("Please enter a name")
+		alert("Por favor, digite um nome")
 		return false
 	}
 
 	if(!parseFloat(postData.latitude)) {
-		alert("Invalid latitude coordinates")
+		alert("Coordenadas de latitude inválidas")
 		return false
 	}
 
 	if(!parseFloat(postData.longitude)) {
-		alert("Invalid longitude coordinates")
+		alert("Coordenadas de longitude inválidas")
 		return false
 	}
 
@@ -109,7 +109,7 @@ form.addEventListener('submit', async (e) => {
 	delete postData.longitude
 
 	if(!postData.acceptsOnChain && !postData.acceptsLightning && !postData.acceptsLiquid) {
-		alert("Please select at least one accepted coin")
+		alert("Selecione pelo menos uma moeda aceita")
 		return false
 	}
 
@@ -130,7 +130,7 @@ form.addEventListener('submit', async (e) => {
 
 		form.reset()
 
-		alert("This business has been added successfully. It will now be reviewed by an admin. Once approved, it will show on the map")
+		alert("Esta empresa foi adicionada com sucesso. Agora será analisado por um administrador. Uma vez aprovado, ele aparecerá no mapa")
 	} catch(e) {
 		alert(e)
 		return false
