@@ -155,7 +155,7 @@ mapkit.init({
     language: navigator.language || navigator.userLanguage,
 })
 
-const center = new mapkit.Coordinate(9.1549238, -83.7570566)
+const center = new mapkit.Coordinate(38.721377, -9.131023)
 const map = new mapkit.Map("apple-maps", {
     center,
     cameraDistance: 50000,
