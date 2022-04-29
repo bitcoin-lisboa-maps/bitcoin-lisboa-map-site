@@ -4,7 +4,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 exports.handler = async function (event, context) {
   
   const msg = {
-    to: 'mapadd@bitcoinjungle.app',
+    to: 'gilliankok@gmail.com',
     from: 'noreply@bitcoinjungle.app',
     subject: 'New Map Item Pending Approval',
     html: 'Please visit <a href="' + process.env.URL_TO_VISIT + '">Cloud Firestore</a> to approve the new map pin submitted by a user.',
