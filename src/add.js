@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app"
 import { getFirestore, collection, addDoc, GeoPoint } from "firebase/firestore"; 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDKlGhb8voPdKxCfEI-7KC6zj9PoU7itUo",
-  authDomain: "bitcoin-jungle-maps.firebaseapp.com",
-  projectId: "bitcoin-jungle-maps",
-  storageBucket: "bitcoin-jungle-maps.appspot.com",
-  messagingSenderId: "962016469889",
-  appId: "1:962016469889:web:f331a8687c201f86f4fe80"
+  apiKey: "AIzaSyBYt1cgKBWxwO3Op-s8R2ScIdNVM-cUlDE",
+  authDomain: "bitcoin-lisboa-maps.firebaseapp.com",
+  projectId: "bitcoin-lisboa-maps",
+  storageBucket: "bitcoin-lisboa-maps.appspot.com",
+  messagingSenderId: "264054856758",
+  appId: "1:264054856758:web:aab408e68be420d1e34c97"
 }
 
 const app = initializeApp(firebaseConfig)
