@@ -28,6 +28,12 @@ const getUserProvidedLocations = async () => {
             acceptsLiquid: data.acceptsLiquid,
             mapInfo: {
                 title: data.name,
+                website: data.website,
+                phone: data.phone,
+                instagram: data.instagram,
+                twitter: data.twitter,
+                whatsapp: data.whatsapp,
+                pluscode: data.pluscode,
                 coordinates: {
                     latitude: data.latLong._lat,
                     longitude: data.latLong._long,
@@ -130,6 +136,7 @@ const addMapPins = (pins) => {
 
         let annotationObj = {
             title: el.mapInfo.title,
+            website: el.mapInfo.website,
             callout: calloutDelegate,
             titleVisibility: mapkit.FeatureVisibility.Hidden,
         }
