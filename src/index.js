@@ -88,6 +88,13 @@ const addMapPins = (pins) => {
                 element.className = "review-callout-content";
                 var title = element.appendChild(document.createElement("h1"));
                 title.textContent = el.mapInfo.title;
+
+                var p1 = element.appendChild(document.createElement("p"))
+
+                if(el.mapInfo.whatsapp) {
+                    p1.textContent = "WhatsApp: " + el.mapInfo.whatsapp
+                }
+
                 
                 if(el.acceptsOnChain) {
                     var img = element.appendChild(document.createElement("img"));
