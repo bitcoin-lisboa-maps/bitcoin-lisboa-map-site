@@ -45,39 +45,39 @@ const getUserProvidedLocations = async () => {
     addMapPins(locationList)
 }
 
-const getBitcoinJungleLocations = () => {
-    // TODO :: Un-comment this if they ever get a Galoy instance!!
-    // const body = JSON.stringify({
-    //     "query": "query businessMapMarkers { businessMapMarkers { username mapInfo { title coordinates { longitude latitude } } } }",
-    //     "variables": {},
-    //     "operationName": "businessMapMarkers"
-    // })
+// const getBitcoinJungleLocations = () => {
+// //     TODO :: Un-comment this if they ever get a Galoy instance!!
+//     const body = JSON.stringify({
+//         "query": "query businessMapMarkers { businessMapMarkers { username mapInfo { title coordinates { longitude latitude } } } }",
+//         "variables": {},
+//         "operationName": "businessMapMarkers"
+//     })
 
-    // fetch(
-    //     "https://api.mainnet.bitcoinjungle.app/graphql", 
-    //     {
-    //         method: "POST",
-    //         headers: {
-    //             "content-type": "application/json",
-    //         },
-    //         body: body,
-    //     }
-    // )
-    // .then((res) => res.json())
-    // .then((obj) => {
-    //     const pins = obj.data.businessMapMarkers.map((pin) => {
-    //         return {
-    //             username: pin.username,
-    //             acceptsLightning: true,
-    //             acceptsOnChain: true,
-    //             acceptsLiquid: false,
-    //             mapInfo: pin.mapInfo,
-    //         } 
-    //     })
+//     fetch(
+//         "https://api.mainnet.bitcoinjungle.app/graphql", 
+//         {
+//             method: "POST",
+//             headers: {
+//                 "content-type": "application/json",
+//             },
+//             body: body,
+//         }
+//     )
+//     .then((res) => res.json())
+//     .then((obj) => {
+//         const pins = obj.data.businessMapMarkers.map((pin) => {
+//             return {
+//                 username: pin.username,
+//                 acceptsLightning: true,
+//                 acceptsOnChain: true,
+//                 acceptsLiquid: false,
+//                 mapInfo: pin.mapInfo,
+//             } 
+//         })
 
-    //     addMapPins(pins)
-    // })
-}
+//         addMapPins(pins)
+//     })
+// }
 
 const addMapPins = (pins) => {
     const markerAnnotations = pins.map((el) => {
@@ -163,7 +163,7 @@ mapkit.init({
         fetch("/api/token")
         .then((res) => res.text())
         .then(done)
-        .then(getBitcoinJungleLocations)
+        // .then(getBitcoinJungleLocations)
         .then(getUserProvidedLocations)
     },
     language: navigator.language || navigator.userLanguage,
