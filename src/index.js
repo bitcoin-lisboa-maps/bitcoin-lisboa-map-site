@@ -91,10 +91,27 @@ const addMapPins = (pins) => {
 
                 var p1 = element.appendChild(document.createElement("p"))
 
+                var anchor = element.appendChild(document.createElement("a"))
+
+                var linebreak = element.appendChild(document.createElement("br"))
+
                 if(el.mapInfo.whatsapp) {
                     p1.textContent = "WhatsApp: " + el.mapInfo.whatsapp
                 }
 
+                if (el.mapInfo.instagram) {
+                    p1.textContent = "Instagram: " + el.mapInfo.instagram
+                }
+
+                if (el.mapInfo.twitter) {
+                    p1.textContent = "Twitter: " + el.mapInfo.twitter
+                }
+
+                if (el.mapInfo.website) {
+                    anchor.appendChild(document.createTextNode("Website: " + el.mapInfo.website))
+                    anchor.setAttribute("href", el.mapInfo.website)
+                    linebreak
+                }
                 
                 if(el.acceptsOnChain) {
                     var img = element.appendChild(document.createElement("img"));
